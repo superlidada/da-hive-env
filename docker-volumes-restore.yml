@@ -1,0 +1,34 @@
+version: "3"
+volumes:
+  postgres-data:
+  hive-data:
+  spark-data:
+services:
+
+  volume-restore:
+    image: alpine
+    environment:
+      - SOURCE_TIME=2022-06-05-0005
+      - SOURCE_PG=volume_postgres
+      - SOURCE_HIVE=volume_hive
+      - SOURCE_SPARK=volume_spark
+    volumes:
+      - ./backup:/backup
+      - postgres-data:/volume_postgres
+      - hive-data:/volume_hive
+      - spark-data:/volume_spark
+    command:
+    - sh
+    - -c
+    - |
+         rm -rf /$${SOURCE_PG}/* /$${SOURCE_PG}/..?* /$${SOURCE_PG}/.[!.]* ;
+         tar -C /$${SOURCE_PG}/ -xjf /backup/$${SOURCE_TIME}_$${SOURCE_PG}.tar.bz2
+      
+         rm -rf /$${SOURCE_HIVE}/* /$${SOURCE_HIVE}/..?* /$${SOURCE_HIVE}/.[!.]* ;
+         tar -C /$${SOURCE_HIVE}/ -xjf /backup/$${SOURCE_TIME}_$${SOURCE_HIVE}.tar.bz2
+      
+         rm -rf /$${SOURCE_SPARK}/* /$${SOURCE_SPARK}/..?* /$${SOURCE_SPARK}/.[!.]*;
+         tar -C /$${SOURCE_SPARK}/ -xjf /backup/$${SOURCE_TIME}_$${SOURCE_SPARK}.tar.bz2
+      
+         
+         

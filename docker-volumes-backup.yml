@@ -1,0 +1,29 @@
+version: "3"
+volumes:
+  postgres-data:
+  hive-data:
+  spark-data:
+services:
+
+  volume-backup:
+    image: alpine
+    tty: false
+    environment:
+      - TARGET_TIME=2022-06-05-0005
+      - TARGET_PG=volume_postgres
+      - TARGET_HIVE=volume_hive
+      - TARGET_SPARK=volume_spark
+
+    volumes:
+      - ./backup:/backup
+      - postgres-data:/volume_postgres
+      - hive-data:/volume_hive
+      - spark-data:/volume_spark
+    command:
+      - sh
+      - -c
+      - |
+        tar -cjf /backup/$${TARGET_TIME}_$${TARGET_PG}.tar.bz2 -C /$${TARGET_PG} ./
+        tar -cjf /backup/$${TARGET_TIME}_$${TARGET_HIVE}.tar.bz2 -C /$${TARGET_HIVE} ./
+        tar -cjf /backup/$${TARGET_TIME}_$${TARGET_SPARK}.tar.bz2 -C /$${TARGET_SPARK} ./
+        
