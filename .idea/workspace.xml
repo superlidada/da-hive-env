@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="47d0a428-ff33-45b7-ac55-95bf602e1dbe" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backup/2022-06-05-0005_volume_hive.tar.bz2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backup/2022-06-05-0005_volume_postgres.tar.bz2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backup/2022-06-05-0005_volume_spark.tar.bz2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-volumes-backup.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-volumes-restore.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/hive-site.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/init-hive.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/files/init-spark.sh" afterDir="false" />
-    </list>
+    <list default="true" id="47d0a428-ff33-45b7-ac55-95bf602e1dbe" name="Changes" comment="first commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +43,7 @@
       <option name="presentableId" value="Default" />
       <updated>1654543716951</updated>
       <workItem from="1654543719210" duration="2930000" />
-      <workItem from="1654547080243" duration="1078000" />
+      <workItem from="1654547080243" duration="1568000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1654545778397</created>
@@ -80,7 +66,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654546813066</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="first commit">
+      <created>1654616517624</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1654616517624</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
