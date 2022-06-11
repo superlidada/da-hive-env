@@ -8,7 +8,7 @@ services:
   volume-restore:
     image: alpine
     environment:
-      - SOURCE_TIME=2022-06-05-0005
+      - SOURCE_TIME=2022-06-12-0105
       - SOURCE_PG=volume_postgres
       - SOURCE_HIVE=volume_hive
       - SOURCE_SPARK=volume_spark
