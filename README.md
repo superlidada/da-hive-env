@@ -14,11 +14,13 @@
 2.进入项目目录 执行备份命令 docker-compose -f ./docker-volumes-restore.yml up -d   
 以上命令要记得各个文件中的SOURCE_TIME 设置的备份时间戳一样。  
 ## 俄罗斯镜像
-```{
+```
+{
 	"registry-mirrors":[
 		"https://docker.m.daocloud.io",
 		"https://huecker.io",
 		"https://dockerhub.timeweb.cloud",
 		"https://noohub.ru"
 		]
-}```
+}
+```
