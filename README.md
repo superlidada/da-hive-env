@@ -6,7 +6,7 @@
 ## 启动步骤
 1.安装docker环境。  
 2.拉取此项目至本地。  
-3.进入项目目录 执行 docker-compose -f ./docker-compose.yml up -d  
+3.进入项目目录 执行 docker compose -f ./docker-compose.yml up -d  
 4.使用hive 客户端链接查询操作（jdbc:hive2://localhost:10000/default）  
 
 ## 数据备份还原步骤 
