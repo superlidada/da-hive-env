@@ -24,3 +24,8 @@
 		]
 }
 ```
+## 一键删除容器镜像
+```
+docker rm -f $(docker ps -aq)
+docker rmi -f $(docker images -q)
+```
