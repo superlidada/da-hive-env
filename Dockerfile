@@ -3,7 +3,7 @@ FROM openjdk:8-jre
 RUN apt-get update && apt-get install -y libpostgresql-jdbc-java procps libsasl2-modules libsasl2-dev && rm -rf /var/lib/apt/lists/*
 
 # Install Apache Hadoop
-ENV HADOOP_VERSION=2.7.4
+ENV HADOOP_VERSION=3.3.6
 ENV HADOOP_HOME /opt/hadoop-$HADOOP_VERSION
 ENV HADOOP_CONF_DIR=$HADOOP_HOME/conf
 ENV PATH $PATH:$HADOOP_HOME/bin
@@ -34,12 +34,12 @@ RUN curl -L \
   && chmod 777 $HIVE_HOME/var/log
 
 # Install Apache Spark
-ENV SPARK_VERSION=3.2.1
-ENV SPARK_HOME=/opt/spark-$SPARK_VERSION-bin-hadoop2.7
+ENV SPARK_VERSION=3.5.5
+ENV SPARK_HOME=/opt/spark-$SPARK_VERSION-bin-hadoop3
 ENV SPARK_CONF_DIR=$SPARK_HOME/conf
 ENV PATH $PATH:$SPARK_HOME/bin
 RUN curl -sL \
-  "https://archive.apache.org/dist/spark/spark-$SPARK_VERSION/spark-$SPARK_VERSION-bin-hadoop2.7.tgz" \
+  "https://archive.apache.org/dist/spark/spark-$SPARK_VERSION/spark-$SPARK_VERSION-bin-hadoop3.tgz" \
     | gunzip \
     | tar -x -C /opt/ \
   && chown -R root:root $SPARK_HOME \
