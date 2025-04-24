@@ -14,7 +14,7 @@ services:
     links:
       - "postgres:postgres"
     volumes:
-      - hive-data:/opt/hadoop-2.7.4/data
+      - hive-data:/opt/hadoop/data
     environment:
       TZ: Asia/Shanghai
 
@@ -27,7 +27,7 @@ services:
       - "postgres:postgres"
       - "hive:hive"
     volumes:
-      - spark-data:/opt/spark-2.4.4-bin-hadoop2.7/data
+      - spark-data:/opt/spark-bin-hadoop/data
     environment:
       TZ: Asia/Shanghai
 
